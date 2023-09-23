@@ -19,6 +19,6 @@ class SnowFlake(Entity):
         self.x -= self.fallingSpeed*2
         if (self.y < 0):
             self.position = Vec3(random() * 10 - 5 + self.player.x, random() * 10, random() * 10 - 5 + self.player.z)
-        if (abs(self.player.x) > 101 or abs(self.player.z) > 101):
+        if (abs(self.player.x) > 110 or abs(self.player.z) > 110):
             self.fallingSpeed = 0
             self.player.dx = 0

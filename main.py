@@ -10,8 +10,8 @@ from snowflake import SnowFlake
 #If the player walks a lot
 def update():                           
    if(abs(player.x) > 100 or abs(player.z) > 100):
-            Text(text='it\'s snowing')
-   if (abs(player.x) > 101 or abs(player.z) > 101):
+        text.world_scale = 25
+   if (abs(player.x) > 110 or abs(player.z) > 110):
          snowstorm_sound.stop()
 
 #just escape
@@ -46,6 +46,7 @@ scene.fog_density = .35
 scene.fog_color = fog_color
 
 snowstorm_sound = Audio("sounds\snowstorm.mp3", autoplay = True, loop = True, pitch = random())
+text = Text(text='it\'s snowing', world_scale = 0)
 
 #run!
 app.run()
